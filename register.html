@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <h1>Online Course</h1>
+    <link rel="stylesheet" href="style/register.css">
+    <script>
+        function myfunc()
+{
+    uname = document.myform.uname.value;
+    if(uname ==""||uname.length<3)
+    {
+		alert("Username is incorrect");
+        return false;
+		document.myform.uname.focus();
+      
+	}
+
+    mail = document.myform.mail.value;
+    if(mail ==""||mail.length<3)
+    {
+		alert("Emailid is incorrect");
+        return false;
+		document.myform.uname.focus();
+      
+	}
+
+
+
+password=document.myform.password.value;
+if (password ==""||(!password.match(/[A-Z]/)))
+{
+    alert("Password is incorrect")
+    return false;
+    document .myform.password.focus();
+}
+
+no=document.myform.no.value;
+if(no==""||no.length<10)
+{
+    alert("Enter valid no")
+    return false;
+    document.myform.no.focus();
+}
+
+
+   document.myform.submit();
+
+alert("Registered successfully ")
+}
+    </script>
+</head>
+<body>
+    <header>
+       
+        <div class="header">
+            <nav>
+                <ul>
+                   
+    
+    
+      
+     </ul>
+    </nav>
+    </div>
+    <div class="register-form">
+        <h2>Register</h2>
+        <form action="login.html" name="myform">
+           
+            <input type= "text" name="uname"  id="username" class="input-box"  placeholder="Full name">
+            <input type="text" name="mail" id="mail" class="input-box" placeholder="Email" >
+            <input type="password"name="password" id="pass" class="input-box"placeholder=" Password">
+            <input type="text"name="no" id="no" class="input-box"placeholder=" Mobile no">
+            
+            <button type="button"  onclick="myfunc()">submit</buttom>
+            <div id="myid"></div>
+       
+
+        </form>
+    
+    </div>
+</body>
+</html>

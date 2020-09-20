@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <h1>Online Course</h1>
+    <link rel="stylesheet" href="style/login.css">
+    <script>
+function myfunc()
+{
+    uname = document.myform.uname.value;
+    if(uname ==""||uname.length<3)
+    {
+		alert("Username is incorrect");
+        return false;
+		document.myform.uname.focus();
+      
+	}
+
+password=document.myform.password.value;
+if (password ==""||(!password.match(/[A-Z]/)))
+{
+    alert("Password is incorrect")
+    return false;
+    document .myform.password.focus();
+}
+document.myform.submit();
+alert("Login successful ")
+}    
+
+    </script>
+</head>
+<body>
+    <header>
+       
+        <div class="header">
+            <nav>
+                <ul>
+                   
+    
+    
+      
+     </ul>
+    </nav>
+    </div>
+    <div class="login-form">
+        <h2>Login</h2>
+        <form action="user.html" name="myform">
+        
+            <input type= "text"  name="uname" id="username" class="input-box"  placeholder="Enter your name">
+            <input type="password" name="password"id="pass" class="input-box" placeholder="Enter your password">
+            <button type="button"  onclick="myfunc()">submit</buttom>
+            <div id="myid"></div>
+       
+
+        </form>
+    
+    </div>
+</body>
+</html>
